@@ -1,84 +1,96 @@
-# React + TypeScript + Vite
+# LP GEES
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page institucional da **GEES Healthtech**, desenvolvida para apresentar um ecossistema de gestao para saude que conecta software, financeiro, contabilidade e consultoria em uma mesma experiencia digital.
 
-Currently, two official plugins are available:
+O foco da pagina e gerar percepcao de valor rapidamente, conduzir o visitante pelos diferenciais da marca e incentivar o contato comercial por meio de CTAs para WhatsApp, area do cliente e canais institucionais.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Proposta da pagina
 
-## React Compiler
+- apresentar a GEES como um ecossistema completo para clinicas, consultorios e day hospital
+- comunicar servicos e modulos de forma clara e comercial
+- destacar dores operacionais do publico-alvo
+- conduzir o usuario para agendamento de demonstracao
+- reforcar autoridade com uma narrativa mais premium e consultiva
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## O que a landing page entrega
 
-## Expanding the ESLint configuration
+- hero principal com posicionamento da marca e CTA comercial
+- sessao de prova de valor do ecossistema GEES
+- blocos de publico-alvo por estagio da operacao
+- leitura de desafios comuns do setor de saude
+- apresentacao de modulos e solucoes do portfolio
+- jornada de implantacao em etapas
+- FAQ comercial
+- formulario de captacao integrado ao WhatsApp
+- rodape com navegacao, canais de contato e redes sociais
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Stack do projeto
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- `React 19`
+- `TypeScript`
+- `Vite`
+- `CSS`
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Como executar
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Instale as dependencias:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Inicie o servidor local:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Para gerar a build de producao:
+
+```bash
+npm run build
+```
+
+Para visualizar a build localmente:
+
+```bash
+npm run preview
+```
+
+## Estrutura principal
+
+```text
+src/
+|- App.tsx        # estrutura principal da landing page
+|- App.css        # estilos globais e sessoes visuais
+|- assets/        # logos, imagens e artes da GEES
+
+public/
+|- screenshots/   # capturas usadas no README
+```
+
 ## Screenshots
 
+As imagens abaixo mostram a experiencia visual da landing page em pontos-chave da navegacao.
+
 ### Tela inicial
-![Tela inicial](./public/screenshots/initial.png)
 
-### Dashboard
-![Dashboard](./public/screenshots/contacts.png)
+<p align="center">
+  <img src="./public/screenshots/initial.png" alt="Hero da landing page da GEES" width="1000" />
+</p>
 
-### Footer
-![Footer](./public/screenshots/footer.png)
+### Bloco de conteudo e prova de valor
 
+<p align="center">
+  <img src="./public/screenshots/contacts.png" alt="Secoes intermediarias da landing page da GEES" width="1000" />
+</p>
+
+### Rodape e contato
+
+<p align="center">
+  <img src="./public/screenshots/footer.png" alt="Rodape da landing page da GEES" width="1000" />
+</p>
+
+## Objetivo
+
+A `lp-gees` foi pensada para funcionar como uma vitrine comercial forte: uma pagina capaz de transmitir clareza, sofisticacao e direcionamento de negocio para atrair conversas com potenciais clientes da GEES.
