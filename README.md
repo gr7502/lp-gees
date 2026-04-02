@@ -71,3 +71,14 @@ export default defineConfig([
   },
 ])
 ```
+## Screenshots
+
+### Tela inicial
+![Tela inicial](./public/screenshots/initial.png)
+
+### Dashboard
+![Dashboard](./public/screenshots/contacts.png)
+
+### Footer
+![Footer](./public/screenshots/footer.png)
+

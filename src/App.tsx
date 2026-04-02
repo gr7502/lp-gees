@@ -232,12 +232,12 @@ function App() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view')
             return
           }
 
-          entry.target.classList.add('in-view')
-          observer.unobserve(entry.target)
+          entry.target.classList.remove('in-view')
         })
       },
       {
